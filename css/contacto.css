@@ -1,0 +1,565 @@
+/* ========================================
+   SOLGAS ATE - CONTACTO
+======================================== */
+
+:root {
+  --azul: #06266f;
+  --azul-oscuro: #041b50;
+  --azul-claro: #edf3ff;
+  --naranja: #ff6900;
+  --naranja-hover: #e95d00;
+  --blanco: #ffffff;
+  --texto: #28364d;
+  --texto-secundario: #68758a;
+  --borde: #dce4f0;
+  --sombra: 0 15px 45px rgba(4, 27, 80, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  color: var(--texto);
+  background: #f5f7fc;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ========================================
+   ENCABEZADO Y NAVEGACIÓN
+======================================== */
+
+header.bg-solgas {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  min-height: 86px;
+  padding: 8px max(20px, calc((100% - 1140px) / 2)) !important;
+  color: var(--blanco);
+  background: var(--azul);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+header .d-flex.align-items-center img {
+  width: auto;
+  height: 66px !important;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+header nav.navbar {
+  padding: 0;
+}
+
+header nav .navbar-nav {
+  gap: 5px;
+}
+
+header nav .nav-link {
+  position: relative;
+  margin: 0 5px;
+  padding: 12px 10px !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+header nav .nav-link::after {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  left: 10px;
+  height: 2px;
+  content: "";
+  background: var(--naranja);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+header nav .nav-link:hover,
+header nav .nav-link:focus {
+  color: var(--blanco) !important;
+}
+
+header nav .nav-link:hover::after,
+header nav .nav-link:focus::after {
+  transform: scaleX(1);
+}
+
+header .navbar-toggler {
+  padding: 8px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 8px;
+}
+
+header .navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(255, 105, 0, 0.25);
+}
+
+.bg-solgas {
+  background-color: var(--azul);
+}
+
+/* ========================================
+   FONDO DE VIDEO
+======================================== */
+
+#video-background {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  overflow: hidden;
+  background: var(--azul-oscuro);
+  pointer-events: none;
+}
+
+#video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120vw;
+  height: 120vh;
+  min-width: 100%;
+  min-height: 100%;
+  border: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(
+    135deg,
+    rgba(4, 27, 80, 0.84),
+    rgba(6, 38, 111, 0.70)
+  );
+  pointer-events: none;
+}
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+======================================== */
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 86px);
+  padding: 65px 20px 80px;
+}
+
+/* ========================================
+   FORMULARIO DE PEDIDO
+======================================== */
+
+.contact-form {
+  width: 100%;
+  max-width: 760px;
+  padding: 42px;
+  color: var(--texto);
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: var(--sombra);
+  backdrop-filter: blur(12px);
+}
+
+.contact-form > h2 {
+  margin: 0 0 12px;
+  padding-left: 17px;
+  color: var(--azul);
+  border-left: 5px solid var(--naranja);
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.contact-form > p {
+  margin: 0 0 30px;
+  color: var(--texto-secundario);
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.contact-form form h4 {
+  margin: 32px 0 20px;
+  padding-bottom: 12px;
+  color: var(--azul);
+  border-bottom: 1px solid var(--borde);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.contact-form form h4:first-of-type {
+  margin-top: 0;
+}
+
+.contact-form .form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #34435c;
+  font-size: 0.83rem;
+  font-weight: 700;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  color: var(--texto);
+  background-color: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form textarea.form-control {
+  min-height: 115px;
+  resize: vertical;
+}
+
+.contact-form .form-control::placeholder {
+  color: #9aa5b6;
+  opacity: 1;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  border-color: var(--naranja);
+  box-shadow: 0 0 0 4px rgba(255, 105, 0, 0.12);
+  outline: none;
+}
+
+.contact-form .mb-3 {
+  margin-bottom: 20px !important;
+}
+
+/* ========================================
+   BOTONES
+======================================== */
+
+.btn-primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 52px;
+  padding: 13px 20px;
+  color: var(--blanco);
+  background: var(--naranja);
+  border: 1px solid var(--naranja);
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  color: var(--blanco);
+  background: var(--naranja-hover);
+  border-color: var(--naranja-hover);
+  box-shadow: 0 8px 20px rgba(255, 105, 0, 0.22);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   TARJETAS Y SECCIONES REUTILIZABLES
+======================================== */
+
+.section-card {
+  padding: 30px;
+  margin-bottom: 30px;
+  background: var(--blanco);
+  border: 1px solid #e8edf5;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(4, 27, 80, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.section-card:hover {
+  box-shadow: 0 14px 35px rgba(4, 27, 80, 0.11);
+  transform: translateY(-4px);
+}
+
+main h2 {
+  color: var(--azul);
+}
+
+main h2:not(.contact-form > h2) {
+  margin-bottom: 20px;
+}
+
+main h2::selection {
+  color: var(--blanco);
+  background: var(--naranja);
+}
+
+/* ========================================
+   IMÁGENES Y ELEMENTOS DE REPARTO
+======================================== */
+
+main img,
+.section-card img {
+  max-width: 100%;
+}
+
+.zona-reparto {
+  position: relative;
+  padding: 55px 25px;
+  color: var(--blanco);
+  background: linear-gradient(135deg, var(--azul), var(--azul-oscuro));
+  text-align: center;
+}
+
+.zona-reparto img {
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.Balonesdegas {
+  width: 100%;
+  max-width: 300px;
+  object-fit: contain;
+}
+
+/* ========================================
+   WHATSAPP FLOTANTE
+======================================== */
+
+.fixed-wsp {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1050;
+}
+
+.wsp-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  background: #20b866;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.wsp-button:hover {
+  background: #159b52;
+  transform: translateY(-4px) scale(1.04);
+}
+
+.imgicon {
+  display: block;
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+/* ========================================
+   PIE DE PÁGINA
+======================================== */
+
+footer {
+  position: relative;
+  z-index: 2;
+  padding: 22px 20px;
+  margin-top: 0;
+  color: rgba(255, 255, 255, 0.85);
+  background: #061735;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+footer a {
+  color: #ff9b52;
+  font-weight: 800;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--blanco);
+}
+
+/* ========================================
+   RESPONSIVE - TABLETS
+======================================== */
+
+@media (max-width: 991.98px) {
+  header.bg-solgas {
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+
+  header .navbar {
+    flex-wrap: wrap;
+  }
+
+  header nav.navbar {
+    margin-left: auto;
+  }
+
+  header nav .navbar-collapse {
+    width: 100%;
+    flex-basis: 100%;
+    padding: 15px 0 10px;
+  }
+
+  header nav .navbar-nav {
+    align-items: stretch;
+  }
+
+  header nav .nav-link {
+    margin: 0;
+    padding: 12px 5px !important;
+  }
+
+  header nav .nav-link::after {
+    right: auto;
+    left: 5px;
+    width: 45px;
+  }
+
+  main {
+    padding: 45px 20px 60px;
+  }
+
+  .contact-form {
+    max-width: 700px;
+    padding: 35px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - CELULARES
+======================================== */
+
+@media (max-width: 575.98px) {
+  header.bg-solgas {
+    min-height: 70px;
+    padding: 8px 16px !important;
+  }
+
+  header .d-flex.align-items-center img {
+    height: 52px !important;
+  }
+
+  main {
+    min-height: calc(100vh - 70px);
+    padding: 28px 14px 45px;
+  }
+
+  .contact-form {
+    padding: 25px 18px;
+    border-radius: 15px;
+  }
+
+  .contact-form > h2 {
+    padding-left: 12px;
+    font-size: 1.65rem;
+  }
+
+  .contact-form > p {
+    margin-bottom: 25px;
+    font-size: 0.84rem;
+  }
+
+  .contact-form form h4 {
+    margin-top: 27px;
+    font-size: 0.95rem;
+  }
+
+  .contact-form .form-control,
+  .contact-form .form-select {
+    min-height: 47px;
+    font-size: 16px;
+  }
+
+  .contact-form textarea.form-control {
+    min-height: 105px;
+  }
+
+  .btn-primary {
+    min-height: 50px;
+    padding: 12px;
+    font-size: 0.83rem;
+  }
+
+  .fixed-wsp {
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .wsp-button {
+    width: 55px;
+    height: 55px;
+  }
+
+  .imgicon {
+    width: 31px;
+    height: 31px;
+  }
+
+  footer {
+    padding: 18px 15px;
+  }
+
+  footer p {
+    font-size: 0.7rem;
+  }
+}
+
+/* ========================================
+   ACCESIBILIDAD
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

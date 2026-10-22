@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#06266f">
+  <meta name="description" content="Consulta las zonas de reparto de Solgas Ate y solicita tu balón de gas con delivery gratuito.">
+  <title>Zonas de Reparto | Solgas Ate</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/localizacion.css">
+</head>
+<body>
+
+  <!-- MENÚ DE NAVEGACIÓN -->
+  <header class="site-header">
+    <div class="header-inner container-fluid">
+      <a class="brand" href="./index.html" aria-label="Solgas Ate - Inicio">
+        <img src="./img/icon header.png" alt="Logo Solgas Ate">
+      </a>
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+          aria-controls="menuNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./localizacion.html">Localización</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ENCABEZADO PRINCIPAL -->
+    <section class="location-hero">
+      <div class="container">
+        <span class="eyebrow">
+          <i class="bi bi-geo-alt-fill"></i> SOLGAS ATE
+        </span>
+        <h1>Zonas de <span>reparto</span></h1>
+        <p>
+          ¡Tu balón de gas llega hasta tu puerta! Consulta nuestros distritos
+          de cobertura y disfruta de un servicio rápido, seguro y con delivery gratuito.
+        </p>
+      </div>
+    </section>
+
+    <section class="location-content container">
+
+      <!-- MAPA -->
+      <div class="section-heading">
+        <span class="section-kicker">LLEGAMOS A TU DISTRITO</span>
+        <h2>Encuentra nuestra zona de cobertura</h2>
+        <p>Revisa el mapa y conoce los distritos donde atendemos tus pedidos.</p>
+      </div>
+
+      <div class="map-card">
+        <div class="map-heading">
+          <i class="bi bi-map-fill"></i>
+          <span>Mapa de zonas de reparto</span>
+        </div>
+
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1IL5zDWVsdQw2DXErlI3k2VAXqmEsZWc&ehbc=2E312F"
+            title="Mapa de zonas de reparto de Solgas Ate"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <!-- DISTRITOS E IMAGEN -->
+      <div class="coverage-grid">
+
+        <div class="districts-card">
+          <span class="section-kicker">DELIVERY GRATUITO</span>
+          <h2>Distritos atendidos</h2>
+          <p class="districts-intro">
+            Realizamos entregas con personal comprometido con tu seguridad y satisfacción.
+          </p>
+
+          <ul class="district-list">
+            <li>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Miraflores</span>
+              <i class="bi bi-check-circle-fill district-check"></i>
+            </li>
+            <li>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Surquillo</span>
+              <i class="bi bi-check-circle-fill district-check"></i>
+            </li>
+            <li>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>San Isidro</span>
+              <i class="bi bi-check-circle-fill district-check"></i>
+            </li>
+            <li>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Barranco</span>
+              <i class="bi bi-check-circle-fill district-check"></i>
+            </li>
+            <li>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>San Borja</span>
+              <i class="bi bi-check-circle-fill district-check"></i>
+            </li>
+            <li>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Santiago de Surco</span>
+              <i class="bi bi-check-circle-fill district-check"></i>
+            </li>
+            <li>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Lince</span>
+              <i class="bi bi-check-circle-fill district-check"></i>
+            </li>
+          </ul>
+
+          <a class="btn btn-solgas"
+            href="https://wa.me/51999541653?text=Hola%2C%20quisiera%20consultar%20si%20realizan%20delivery%20a%20mi%20direcci%C3%B3n."
+            target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-whatsapp"></i>
+            Consultar mi dirección
+          </a>
+        </div>
+
+        <div class="delivery-card">
+          <img src="./img/delivery.png"
+            alt="Servicio de delivery de balones de gas Solgas"
+            loading="lazy">
+
+          <div class="delivery-note">
+            <span class="delivery-icon">
+              <i class="bi bi-truck"></i>
+            </span>
+            <div>
+              <h3>Rápido y seguro</h3>
+              <p>
+                Coordinamos contigo para que recibas tu pedido de forma cómoda y segura.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LLAMADA A LA ACCIÓN -->
+      <section class="bottom-cta">
+        <div class="cta-icon">
+          <i class="bi bi-fire"></i>
+        </div>
+
+        <div class="cta-copy">
+          <h2>¿Necesitas un balón de gas?</h2>
+          <p>Escríbenos por WhatsApp y coordinamos tu pedido.</p>
+        </div>
+
+        <a
+          href="https://wa.me/51999541653?text=Hola%2C%20quisiera%20hacer%20un%20pedido%20de%20gas."
+          target="_blank" rel="noopener noreferrer"
+          class="btn btn-cta">
+          <i class="bi bi-whatsapp"></i>
+          Pedir por WhatsApp
+        </a>
+      </section>
+
+    </section>
+  </main>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a class="whatsapp-float"
+    href="https://wa.me/51999541653?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20los%20balones%20de%20gas."
+    target="_blank" rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>
+        © 2026
+        <a href="https://wa.me/51999541653?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20los%20balones%20de%20gas.">
+          SOLGAS ATE
+        </a>.
+        Todos los derechos reservados.
+      </p>
+      <span>Tu energía, a tu puerta.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

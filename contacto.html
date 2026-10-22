@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#06266f">
+  <meta name="description" content="Realiza tu pedido de balones de gas Solgas Ate de forma rápida y sencilla por WhatsApp.">
+  <title>Realiza tu pedido | Solgas Ate</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/contacto.css">
+</head>
+<body>
+  <div id="video-background" aria-hidden="true">
+    <iframe
+      src="https://www.youtube.com/embed/XrpgwdhbF0A?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=XrpgwdhbF0A&amp;controls=0&amp;showinfo=0&amp;modestbranding=1"
+      title="Video de fondo de Solgas"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      tabindex="-1">
+    </iframe>
+  </div>
+  <div class="overlay" aria-hidden="true"></div>
+
+  <header class="bg-solgas py-2 px-3">
+    <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap">
+      <a class="d-flex align-items-center" href="./index.html" aria-label="Solgas Ate - Inicio">
+        <img class="logo-header" src="./img/icon header.png" alt="Logo Solgas Ate">
+      </a>
+      <nav class="navbar navbar-expand-lg navbar-dark p-0" aria-label="Navegación principal">
+        <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+          aria-controls="menuNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="./localizacion.html">Localización</a></li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-whatsapp-header" href="https://wa.me/51999541653" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp" aria-hidden="true"></i> Escríbenos
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contact-page">
+    <section class="contact-form" aria-labelledby="contact-title">
+      <div class="contact-heading">
+        <span class="contact-eyebrow"><i class="bi bi-truck" aria-hidden="true"></i> Atención rápida y segura</span>
+        <h1 id="contact-title">Realiza tu pedido</h1>
+        <p>Completa tus datos y enviaremos tu solicitud directamente a nuestro WhatsApp.</p>
+      </div>
+
+      <form id="pedidoForm">
+        <h2 class="form-section-title"><i class="bi bi-person-circle" aria-hidden="true"></i> Datos del cliente</h2>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="nombre" class="form-label">Nombre y apellido <span aria-hidden="true">*</span></label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" autocomplete="name" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="telefono" class="form-label">Número de teléfono <span aria-hidden="true">*</span></label>
+            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ej. 987654321" inputmode="numeric" pattern="[0-9]{9}" minlength="9" maxlength="9" autocomplete="tel" title="Ingresa un número de 9 dígitos" required>
+          </div>
+        </div>
+
+        <h2 class="form-section-title"><i class="bi bi-geo-alt" aria-hidden="true"></i> Dirección de entrega</h2>
+        <div class="mb-3">
+          <label for="direccion" class="form-label">Dirección completa <span aria-hidden="true">*</span></label>
+          <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Ej. Av. Los Olivos 123" autocomplete="street-address" required>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="tipoInmueble" class="form-label">Tipo de inmueble <span aria-hidden="true">*</span></label>
+            <select class="form-select" id="tipoInmueble" name="tipoInmueble" required>
+              <option value="" selected disabled>Selecciona una opción</option>
+              <option value="Casa">Casa</option>
+              <option value="Departamento">Departamento</option>
+              <option value="Edificio">Edificio</option>
+              <option value="Local comercial">Local comercial</option>
+              <option value="Empresa">Empresa</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="piso" class="form-label">Piso / departamento</label>
+            <input type="text" class="form-control" id="piso" name="piso" placeholder="Ej. 3.er piso - Dpto. 302">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="referencia" class="form-label">Referencia de la dirección</label>
+          <input type="text" class="form-control" id="referencia" name="referencia" placeholder="Ej. Cerca al parque principal">
+        </div>
+
+        <h2 class="form-section-title"><i class="bi bi-fire" aria-hidden="true"></i> Producto y cantidad</h2>
+        <div class="row">
+          <div class="col-md-8 mb-3">
+            <label for="producto" class="form-label">¿Qué producto deseas? <span aria-hidden="true">*</span></label>
+            <select class="form-select" id="producto" name="producto" required>
+              <option value="" selected disabled>Selecciona un producto</option>
+              <option value="Balón de gas 10 kg">Balón de gas 10 kg</option>
+              <option value="Balón de gas 45 kg">Balón de gas 45 kg</option>
+              <option value="Válvula">Válvula</option>
+              <option value="Regulador">Regulador</option>
+              <option value="Manguera">Manguera</option>
+              <option value="Accesorios para gas">Accesorios para gas</option>
+              <option value="Otro producto">Otro</option>
+            </select>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="cantidad" class="form-label">Cantidad <span aria-hidden="true">*</span></label>
+            <input type="number" class="form-control" id="cantidad" name="cantidad" min="1" max="99" value="1" required>
+          </div>
+        </div>
+
+        <h2 class="form-section-title"><i class="bi bi-credit-card" aria-hidden="true"></i> Forma de pago</h2>
+        <div class="mb-3">
+          <label for="pago" class="form-label">¿Cómo deseas pagar? <span aria-hidden="true">*</span></label>
+          <select class="form-select" id="pago" name="pago" required>
+            <option value="" selected disabled>Selecciona una forma de pago</option>
+            <option value="Efectivo">Efectivo</option>
+            <option value="Yape">Yape</option>
+            <option value="Plin">Plin</option>
+            <option value="Tarjeta">Tarjeta</option>
+            <option value="Transferencia bancaria">Transferencia bancaria</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label for="mensaje" class="form-label">Comentarios o indicaciones adicionales</label>
+          <textarea class="form-control" id="mensaje" name="mensaje" rows="3" placeholder="Ej. Llamar antes de llegar o dejar el balón en recepción."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">
+          <i class="bi bi-whatsapp" aria-hidden="true"></i> Enviar pedido por WhatsApp
+        </button>
+        <p class="form-note"><i class="bi bi-shield-check" aria-hidden="true"></i> Revisa tus datos antes de enviar el pedido.</p>
+      </form>
+    </section>
+  </main>
+
+  <a class="fixed-wsp wsp-button" href="https://wa.me/51999541653?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20los%20balones%20de%20gas."
+    target="_blank" rel="noopener noreferrer" aria-label="Contactar a Solgas Ate por WhatsApp">
+    <img class="imgicon" src="./img/wsp icon.png" alt="">
+  </a>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 <a href="https://wa.me/51999541653" target="_blank" rel="noopener noreferrer">SOLGAS ATE</a>. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("pedidoForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const nombre = document.getElementById("nombre").value.trim();
+      const telefono = document.getElementById("telefono").value.trim();
+      const direccion = document.getElementById("direccion").value.trim();
+      const referencia = document.getElementById("referencia").value.trim();
+      const tipoInmueble = document.getElementById("tipoInmueble").value;
+      const piso = document.getElementById("piso").value.trim();
+      const producto = document.getElementById("producto").value;
+      const cantidad = document.getElementById("cantidad").value;
+      const pago = document.getElementById("pago").value;
+      const mensaje = document.getElementById("mensaje").value.trim();
+      const numeroWhatsApp = "51999541653";
+
+      const texto = `*NUEVO PEDIDO - SOLGAS ATE*
+
+*DATOS DEL CLIENTE*
+Nombre: ${nombre}
+Teléfono: ${telefono}
+
+*DIRECCIÓN DE ENTREGA*
+Dirección: ${direccion}
+Tipo de inmueble: ${tipoInmueble}
+Piso / Departamento: ${piso || "No especificado"}
+Referencia: ${referencia || "No especificada"}
+
+*PRODUCTO*
+Producto: ${producto}
+Cantidad: ${cantidad}
+
+*FORMA DE PAGO*
+${pago}
+
+*COMENTARIOS*
+${mensaje || "Sin comentarios"}
+
+Gracias por elegir Solgas Ate.`;
+
+      const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
